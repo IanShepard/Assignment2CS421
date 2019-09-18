@@ -105,21 +105,21 @@ def displayWholeXML():
     print()
     print()
 
-    for i in range(33):
+    for i in range(len(tree)):
         print("%30s %20s %5s %8s %8s %13s %6s %6s %12s %18s %11s %18s %15s" % (tree[i][0].text, tree[i][1].text, tree[i][2].text, tree[i][3].text, tree[i][4].text, tree[i][5].text, tree[i][6].text, tree[i][7].text, tree[i][8].text, tree[i][9].text, tree[i][10].text, tree[i][11].text, tree[i][12].text))
 
 def xmlSingleRecord():
     root = ET.fromstring(xml)
 
     print("Which row would you like to display?")
-    print("I.E. number between 1 - 33")
+    print("I.E. number between 1 -", len(root))
 
     option = int(input(">>> ")) - 1
 
-    for i in range(33):
+    for i in range(len(root)):
         if (option == i):
             print("%3s.  " % (i+1), end='')
-            for j in range(13):
+            for j in range(len(root[0])):
                 print(root[i][j].text,"   ", end='')
     print()
     main()
@@ -132,20 +132,20 @@ def xmlWholeColumn():
     print("Which column would you like to display?")
 
     print("I.E.", " ", end='')
-    for i in range(13):
+    for i in range(len(tree[0])):
         print(root[1][i].tag,", ", end='')
         rootlist.append(root[1][i].tag)
     print()
 
     option = str(input(">>> "))
 
-    for i in range(13):
+    for i in range(len(tree[0])):
         if (option == root[1][i].tag):
             categoryIndex = i
 
             print("%30s" % (root[1][i].tag))
             print()
-            for j in range(33):
+            for j in range(len(tree)):
                 print("%30s" % (root[j][categoryIndex].text))
     main()
 
@@ -158,7 +158,7 @@ def xmlSort():
     print("Which category would you like to sort by?")
 
     print("I.E.", " ", end='')
-    for i in range(13):
+    for i in range(len(tree[0])):
         print(tree[1][i].tag,", ", end='')
         rootlist.append(tree[1][i].tag)
     print()
@@ -167,27 +167,28 @@ def xmlSort():
 
     temp = []
 
-    for j in range(33):
+    for j in range(len(tree)):
         map = {tree[j][0].tag: tree[j][0].text, tree[j][1].tag : tree[j][1].text, tree[j][2].tag : tree[j][2].text, tree[j][3].tag : tree[j][3].text, tree[j][4].tag : tree[j][4].text, tree[j][5].tag : tree[j][5].text, tree[j][6].tag : tree[j][6].text, tree[j][7].tag : tree[j][7].text, tree[j][8].tag : tree[j][8].text, tree[j][9].tag : tree[j][9].text, tree[j][10].tag : tree[j][10].text, tree[j][11].tag : tree[j][11].text, tree[j][12].tag : tree[j][12].text}
         temp.append(map)
 
     sortedlist = sorted(temp, key = lambda i: i[option])
+
+    print("Value: ", list(sortedlist)[0]['app'])
+
     header = sortedlist[0].keys()
     rows =  [x.values() for x in sortedlist]
     print(tabulate.tabulate(rows, header))
 
     main()
 
-def selection_sort(arr):
-    for i in range(len(arr)):
-        minimum = i
+#Checks to see if a map key value should be an int instead of str
+def hasNumbers(inputString):
+    return any(char.isdigit() for char in inputString)
 
-        for j in range(i + 1, len(arr)):
-            if arr[j] < arr[minimum]:
-                minimum = j
-
-        arr[minimum], arr[i] = arr[i], arr[minimum]
-    return arr
+def search(list, key, value):
+    for item in list:
+        if item[key] == value:
+            return item
 
 def calculateComplaints():
     print("calcualting complaints...")
