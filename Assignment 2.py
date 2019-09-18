@@ -6,6 +6,7 @@ with open('googleplayapps.xml') as f:
     xml = f.read()
 
 def main():
+    #program controller
     fileType = chooseFileType()
 
     if (fileType == "consumer financial services"):
@@ -16,6 +17,7 @@ def main():
     fileMethod = combineFileAndDisplayType(fileType, displayType)
 
 def chooseFileType():
+    #selects a file type or uses consumer financial services
     print("----------------------------------------------------")
     print("Choose a file type to analyse.")
     print("Type '1' for CSV")
@@ -46,6 +48,7 @@ def chooseFileType():
         return
 
 def chooseDisplayType():
+    #chooses how you sort the data
     print("-----------------------------------------------------")
     print("Choose a way to display the data.")
     print("Type '1' to display a single record by its row number")
@@ -68,6 +71,9 @@ def chooseDisplayType():
         return
 
 def combineFileAndDisplayType(file, display):
+    #sorts gets filetyoe and displaytype and runs the proper function
+
+    #methods for filetype CSV
     if (file == "csv"):
         if (display == "single record"):
             #csvSingleRecord()
@@ -78,6 +84,7 @@ def combineFileAndDisplayType(file, display):
         elif (display == "sort"):
             #csvSort()
             return "CSV and SORT"
+    #methods for filetype XML
     elif (file == "xml"):
         if (display == "single record"):
             xmlSingleRecord()
@@ -87,6 +94,7 @@ def combineFileAndDisplayType(file, display):
             xmlSort()
             #displayWholeXML()
             return "XML and SORT"
+    #methods for filetype JSON
     elif (file == "json"):
         if (display == "single record"):
             #jsonSingleRecord()
@@ -97,16 +105,6 @@ def combineFileAndDisplayType(file, display):
         elif (display == "sort"):
             #jsonSort()
              return "JSON and SORT"
-
-def displayWholeXML():
-    tree = ET.fromstring(xml)
-
-    print("%30s %20s %5s %8s %8s %13s %6s %6s %9s %16s %11s %18s %15s" % (tree[1][0].tag, tree[1][1].tag, tree[1][2].tag, tree[1][3].tag, tree[1][4].tag, tree[1][5].tag, tree[1][6].tag, tree[1][7].tag, tree[1][8].tag, tree[1][9].tag, tree[1][10].tag, tree[1][11].tag, tree[1][12].tag), end='')
-    print()
-    print()
-
-    for i in range(len(tree)):
-        print("%30s %20s %5s %8s %8s %13s %6s %6s %12s %18s %11s %18s %15s" % (tree[i][0].text, tree[i][1].text, tree[i][2].text, tree[i][3].text, tree[i][4].text, tree[i][5].text, tree[i][6].text, tree[i][7].text, tree[i][8].text, tree[i][9].text, tree[i][10].text, tree[i][11].text, tree[i][12].text))
 
 def xmlSingleRecord():
     root = ET.fromstring(xml)
