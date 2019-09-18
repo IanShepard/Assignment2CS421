@@ -1,0 +1,497 @@
+<root>
+  <row>
+    <price>0</price>
+    <currentver>1.0.0</currentver>
+    <installs>10,000</installs>
+    <reviews>159</reviews>
+    <size>19M</size>
+    <androidver>4.0.3 and up</androidver>
+  <rating>4.1</rating>
+    <lastupdated>7-jan-18</lastupdated>
+    <category>ART</category>
+    <genres>Art and Design</genres>
+    <contentrating>Everyone</contentrating>
+    <type>Free</type>
+    <app>Photo Editor</app>
+    </row>
+  <row>
+    <app>Monster Truck Stunt 3D 2019</app>
+    <category>AUTO</category>
+    <rating>4.2</rating>
+    <reviews>367</reviews>
+    <size>25M</size>
+    <installs>100,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Auto and Vehicles</genres>
+    <lastupdated>10 May 18</lastupdated>
+    <currentver>1</currentver>
+    <androidver>4.0.3 and up</androidver>
+  </row>
+  <row>
+    <app>Hush Beauty for Everyone</app>
+    <category>BEAUTY</category>
+    <rating>4.7</rating>
+    <reviews>18900</reviews>
+    <size>17M</size>
+    <installs>500,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Beauty</genres>
+    <lastupdated>2-aug-18</lastupdated>
+    <currentver>6.10.1</currentver>
+    <androidver>5.0 and up</androidver>
+  </row>
+  <row>
+    <app>Wattpad</app>
+    <category>BOOKS AND REFERENCE</category>
+    <rating>4.6</rating>
+    <reviews>2914724</reviews>
+    <size>varies</size>
+    <installs>100,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Teen</contentrating>
+    <genres>Books</genres>
+    <lastupdated>1-aug-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Visual Voicemail by MetroPCS</app>
+    <category>BUSINESS</category>
+    <rating>4.1</rating>
+    <reviews>16129</reviews>
+    <size>varies</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Business</genres>
+    <lastupdated>30-jul-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>LINE WEBTOON   Free Comics</app>
+    <category>COMICS</category>
+    <rating>4.5</rating>
+    <reviews>1013635</reviews>
+    <size>varies</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Teen</contentrating>
+    <genres>Comics</genres>
+    <lastupdated>31-jul-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Messenger</app>
+    <category>COMMUNICATION</category>
+    <rating>4</rating>
+    <reviews>56642847</reviews>
+    <size>varies</size>
+    <installs>1,000,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Communication</genres>
+    <lastupdated>1-aug-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Moco Chat, Meet People</app>
+    <category>DATING</category>
+    <rating>4.2</rating>
+    <reviews>1545</reviews>
+    <size>varies</size>
+    <installs>10,000</installs>
+    <type>Paid</type>
+    <price>$3.99</price>
+    <contentrating>Mature 17</contentrating>
+    <genres>Dating</genres>
+    <lastupdated>19-Jun-18</lastupdated>
+    <currentver>2.6.139</currentver>
+    <androidver>4.1 and up</androidver>
+  </row>
+  <row>
+    <app>Duolingo</app>
+    <category>EDUCATION</category>
+    <rating>4.7</rating>
+    <reviews>6289924</reviews>
+    <size>varies</size>
+    <installs>100,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Education</genres>
+    <lastupdated>1-aug-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Netflix</app>
+    <category>ENTERTAINMENT</category>
+    <rating>4.4</rating>
+    <reviews>5456208</reviews>
+    <size>varies</size>
+    <installs>100,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Teen</contentrating>
+    <genres>Entertainment</genres>
+    <lastupdated>31-jul-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>All Events in City</app>
+    <category>EVENTS</category>
+    <rating>4</rating>
+    <reviews>3782</reviews>
+    <size>9.5M</size>
+    <installs>100,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Events</genres>
+    <lastupdated>12-jun-18</lastupdated>
+    <currentver>8.4</currentver>
+    <androidver>4.0.3 and up</androidver>
+  </row>
+  <row>
+    <app>K PLUS</app>
+    <category>FINANCE</category>
+    <rating>4.4</rating>
+    <reviews>124424</reviews>
+    <size>varies</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Finance</genres>
+    <lastupdated>26-jun-18</lastupdated>
+    <currentver>4.6.0</currentver>
+    <androidver>4.2 and up</androidver>
+  </row>
+  <row>
+    <app>McDonald's</app>
+    <category>FOOD AND DRINK</category>
+    <rating>3.6</rating>
+    <reviews>145323</reviews>
+    <size>42M</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Food and Drink</genres>
+    <lastupdated>31-jul-18</lastupdated>
+    <currentver>5.15.0</currentver>
+    <androidver>4.4 and up</androidver>
+  </row>
+  <row>
+    <app>Home Workout   No Equipment</app>
+    <category>HEALTH AND FITNESS</category>
+    <rating>4.8</rating>
+    <reviews>428156</reviews>
+    <size>15M</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Health</genres>
+    <lastupdated>28-jun-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Zillow</app>
+    <category>HOUSE AND HOME</category>
+    <rating>4.5</rating>
+    <reviews>417907</reviews>
+    <size>34M</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Home</genres>
+    <lastupdated>1-aug-18</lastupdated>
+    <currentver>9.8.1.7425</currentver>
+    <androidver>4.4 and up</androidver>
+  </row>
+  <row>
+    <app>Digital Library</app>
+    <category>LIBRARIES AND DEMO</category>
+    <rating>3.9</rating>
+    <reviews>2087</reviews>
+    <size>varies</size>
+    <installs>50,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Libraries</genres>
+    <lastupdated>30-jul-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Dollhouse Games</app>
+    <category>LIFESTYLE</category>
+    <rating>4.1</rating>
+    <reviews>18968</reviews>
+    <size>32M</size>
+    <installs>5,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Teen</contentrating>
+    <genres>Lifestyle</genres>
+    <lastupdated>26-apr-18</lastupdated>
+    <currentver>5.1</currentver>
+    <androidver>4.1 and up</androidver>
+  </row>
+  <row>
+    <app>ROBLOX</app>
+    <category>GAME</category>
+    <rating>4.5</rating>
+    <reviews>4447388</reviews>
+    <size>67M</size>
+    <installs>100,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone 10</contentrating>
+    <genres>Adventure</genres>
+    <lastupdated>31-jul-18</lastupdated>
+    <currentver>2.347.225742</currentver>
+    <androidver>4.1 and up</androidver>
+  </row>
+  <row>
+    <app>YouTube Kids</app>
+    <category>FAMILY</category>
+    <rating>4.5</rating>
+    <reviews>470694</reviews>
+    <size>varies</size>
+    <installs>50,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Entertainment</genres>
+    <lastupdated>3-aug-18</lastupdated>
+    <currentver>3.43.3</currentver>
+    <androidver>4.1 and up</androidver>
+  </row>
+  <row>
+    <app>Monash Uni</app>
+    <category>MEDICAL</category>
+    <rating>4.2</rating>
+    <reviews>1135</reviews>
+    <size>12M</size>
+    <installs>100,000</installs>
+    <type>Paid</type>
+    <price>$9.00</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Medical</genres>
+    <lastupdated>16-jul-18</lastupdated>
+    <currentver>2.0.7</currentver>
+    <androidver>4.0 and up</androidver>
+  </row>
+  <row>
+    <app>Instagram</app>
+    <category>SOCIAL</category>
+    <rating>4.5</rating>
+    <reviews>66577313</reviews>
+    <size>varies</size>
+    <installs>1,000,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Teen</contentrating>
+    <genres>Social</genres>
+    <lastupdated>31-jul-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Amazon for Tablets</app>
+    <category>SHOPPING</category>
+    <rating>4</rating>
+    <reviews>141613</reviews>
+    <size>22M</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Teen</contentrating>
+    <genres>Shopping</genres>
+    <lastupdated>31-jul-18</lastupdated>
+    <currentver>16.14.0.850</currentver>
+    <androidver>4.4 and up</androidver>
+  </row>
+  <row>
+    <app>TouchNote</app>
+    <category>PHOTOGRAPHY</category>
+    <rating>4.1</rating>
+    <reviews>19232</reviews>
+    <size>28M</size>
+    <installs>1,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Photography</genres>
+    <lastupdated>6-aug-18</lastupdated>
+    <currentver>7.4.2</currentver>
+    <androidver>4.4 and up</androidver>
+  </row>
+  <row>
+    <app>ESPN</app>
+    <category>SPORTS</category>
+    <rating>4.2</rating>
+    <reviews>521138</reviews>
+    <size>varies</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone 10</contentrating>
+    <genres>Sports</genres>
+    <lastupdated>19-jul-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>5.0 and up</androidver>
+  </row>
+  <row>
+    <app>Expedia</app>
+    <category>TRAVEL AND LOCAL</category>
+    <rating>4.1</rating>
+    <reviews>136626</reviews>
+    <size>14M</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Travel and Local</genres>
+    <lastupdated>6-aug-18</lastupdated>
+    <currentver>18.30.0</currentver>
+    <androidver>5.0 and up</androidver>
+  </row>
+  <row>
+    <app>Moto File Manager</app>
+    <category>TOOLS</category>
+    <rating>4.1</rating>
+    <reviews>38655</reviews>
+    <size>5.9M</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Tools</genres>
+    <lastupdated>1-feb-18</lastupdated>
+    <currentver>v3.7.93</currentver>
+    <androidver>5.0 and up</androidver>
+  </row>
+  <row>
+    <app>Nova Launcher</app>
+    <category>PERSONALIZATION</category>
+    <rating>4.6</rating>
+    <reviews>1121805</reviews>
+    <size>varies</size>
+    <installs>50,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Personalization</genres>
+    <lastupdated>14 May 18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Microsoft Word</app>
+    <category>PRODUCTIVITY</category>
+    <rating>4.5</rating>
+    <reviews>2084126</reviews>
+    <size>varies</size>
+    <installs>500,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Productivity</genres>
+    <lastupdated>11-jul-18</lastupdated>
+    <currentver>16.0.10325.20043</currentver>
+    <androidver>4.4 and up</androidver>
+  </row>
+  <row>
+    <app>Baby Names</app>
+    <category>PARENTING</category>
+    <rating>4.5</rating>
+    <reviews>86</reviews>
+    <size>2.8M</size>
+    <installs>10,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Parenting</genres>
+    <lastupdated>3-aug-18</lastupdated>
+    <currentver>1.7</currentver>
+    <androidver>4.0.3 and up</androidver>
+  </row>
+  <row>
+    <app>The Weather Channel</app>
+    <category>WEATHER</category>
+    <rating>4.4</rating>
+    <reviews>1558437</reviews>
+    <size>varies</size>
+    <installs>50,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Weather</genres>
+    <lastupdated>1-aug-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>YouTube</app>
+    <category>VIDEO PLAYERS</category>
+    <rating>4.3</rating>
+    <reviews>25655305</reviews>
+    <size>varies</size>
+    <installs>1,000,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Teen</contentrating>
+    <genres>Video Players</genres>
+    <lastupdated>2-aug-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Fox News</app>
+    <category>NEWS AND MAGAZINES</category>
+    <rating>4.5</rating>
+    <reviews>249919</reviews>
+    <size>varies</size>
+    <installs>10,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone 10</contentrating>
+    <genres>News</genres>
+    <lastupdated>30-jul-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+  <row>
+    <app>Waze Maps</app>
+    <category>MAPS AND NAVIGATION</category>
+    <rating>4.6</rating>
+    <reviews>7232629</reviews>
+    <size>varies</size>
+    <installs>100,000,000</installs>
+    <type>Free</type>
+    <price>0</price>
+    <contentrating>Everyone</contentrating>
+    <genres>Navigation</genres>
+    <lastupdated>29-jul-18</lastupdated>
+    <currentver>varies</currentver>
+    <androidver>varies</androidver>
+  </row>
+</root>

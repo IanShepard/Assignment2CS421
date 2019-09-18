@@ -1,5 +1,9 @@
 import xml.etree.ElementTree as ET
 import sys
+import tabulate
+
+with open('googleplayapps.xml') as f:
+    xml = f.read()
 
 def main():
     fileType = chooseFileType()
@@ -81,6 +85,7 @@ def combineFileAndDisplayType(file, display):
             xmlWholeColumn()
         elif (display == "sort"):
             xmlSort()
+            #displayWholeXML()
             return "XML and SORT"
     elif (file == "json"):
         if (display == "single record"):
@@ -94,9 +99,6 @@ def combineFileAndDisplayType(file, display):
              return "JSON and SORT"
 
 def displayWholeXML():
-    with open('googleplayapps.xml') as f:
-        xml = f.read()
-
     tree = ET.fromstring(xml)
 
     print("%30s %20s %5s %8s %8s %13s %6s %6s %9s %16s %11s %18s %15s" % (tree[1][0].tag, tree[1][1].tag, tree[1][2].tag, tree[1][3].tag, tree[1][4].tag, tree[1][5].tag, tree[1][6].tag, tree[1][7].tag, tree[1][8].tag, tree[1][9].tag, tree[1][10].tag, tree[1][11].tag, tree[1][12].tag), end='')
@@ -107,9 +109,6 @@ def displayWholeXML():
         print("%30s %20s %5s %8s %8s %13s %6s %6s %12s %18s %11s %18s %15s" % (tree[i][0].text, tree[i][1].text, tree[i][2].text, tree[i][3].text, tree[i][4].text, tree[i][5].text, tree[i][6].text, tree[i][7].text, tree[i][8].text, tree[i][9].text, tree[i][10].text, tree[i][11].text, tree[i][12].text))
 
 def xmlSingleRecord():
-    with open('googleplayapps.xml') as f:
-        xml = f.read()
-
     root = ET.fromstring(xml)
 
     print("Which row would you like to display?")
@@ -127,9 +126,6 @@ def xmlSingleRecord():
 
 def xmlWholeColumn():
     rootlist = []
-
-    with open('googleplayapps.xml') as f:
-        xml = f.read()
 
     root = ET.fromstring(xml)
     print(end='')
@@ -153,20 +149,45 @@ def xmlWholeColumn():
                 print("%30s" % (root[j][categoryIndex].text))
     main()
 
-
-
 def xmlSort():
-    #option = str(input(">>> "))
 
-    with open('googleplayapps.xml') as f:
-        xml = f.read()
+    tree = ET.fromstring(xml)
 
-    tree = ET.ElementTree(ET.fromstring(xml))
-    tree[:] = sorted(tree, key=lambda ch: ch.xpath("app : text()"))
+    rootlist = []
 
-    print(et.tostring(tree).decode("utf-8"))
+    print("Which category would you like to sort by?")
+
+    print("I.E.", " ", end='')
+    for i in range(13):
+        print(tree[1][i].tag,", ", end='')
+        rootlist.append(tree[1][i].tag)
+    print()
+
+    option = str(input(">>> "))
+
+    temp = []
+
+    for j in range(33):
+        map = {tree[j][0].tag: tree[j][0].text, tree[j][1].tag : tree[j][1].text, tree[j][2].tag : tree[j][2].text, tree[j][3].tag : tree[j][3].text, tree[j][4].tag : tree[j][4].text, tree[j][5].tag : tree[j][5].text, tree[j][6].tag : tree[j][6].text, tree[j][7].tag : tree[j][7].text, tree[j][8].tag : tree[j][8].text, tree[j][9].tag : tree[j][9].text, tree[j][10].tag : tree[j][10].text, tree[j][11].tag : tree[j][11].text, tree[j][12].tag : tree[j][12].text}
+        temp.append(map)
+
+    sortedlist = sorted(temp, key = lambda i: i[option])
+    header = sortedlist[0].keys()
+    rows =  [x.values() for x in sortedlist]
+    print(tabulate.tabulate(rows, header))
 
     main()
+
+def selection_sort(arr):
+    for i in range(len(arr)):
+        minimum = i
+
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[minimum]:
+                minimum = j
+
+        arr[minimum], arr[i] = arr[i], arr[minimum]
+    return arr
 
 def calculateComplaints():
     print("calcualting complaints...")
