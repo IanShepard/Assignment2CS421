@@ -167,28 +167,42 @@ def xmlSort():
 
     temp = []
 
+    #Converts elemetnTree into a LIST of LISTs
     for j in range(len(tree)):
-        map = {tree[j][0].tag: tree[j][0].text, tree[j][1].tag : tree[j][1].text, tree[j][2].tag : tree[j][2].text, tree[j][3].tag : tree[j][3].text, tree[j][4].tag : tree[j][4].text, tree[j][5].tag : tree[j][5].text, tree[j][6].tag : tree[j][6].text, tree[j][7].tag : tree[j][7].text, tree[j][8].tag : tree[j][8].text, tree[j][9].tag : tree[j][9].text, tree[j][10].tag : tree[j][10].text, tree[j][11].tag : tree[j][11].text, tree[j][12].tag : tree[j][12].text}
-        temp.append(map)
+        list = []
+        for n in range(len(tree[0])):
+            list.append(tree[j][n].tag)
+            list.append(tree[j][n].text)
+        temp.append(list)
 
-    sortedlist = sorted(temp, key = lambda i: i[option])
+    #Converts string of numbers into Int
+    for k in range(len(tree)):
+        list = []
+        for m in range(len(tree[0])):
+            if (hasNumbers(temp[k][m])):
+                try:
+                    newvalue = temp[k][m].replace(',' , '')
+                    temp[k][m] = float(newvalue)
+                except Exception as e:
+                    continue
 
-    print("Value: ", list(sortedlist)[0]['app'])
+    outputlist = []
+    for m in range(len(temp)):
+        i = iter(temp[m])
+        newtemp = dict(zip(i, i))
+        outputlist.append(newtemp)
+
+    sortedlist = sorted(outputlist, key = lambda i: i[option])
 
     header = sortedlist[0].keys()
     rows =  [x.values() for x in sortedlist]
-    print(tabulate.tabulate(rows, header))
+    print(tabulate.tabulate(rows, header, floatfmt=".1f"))
 
     main()
 
 #Checks to see if a map key value should be an int instead of str
 def hasNumbers(inputString):
     return any(char.isdigit() for char in inputString)
-
-def search(list, key, value):
-    for item in list:
-        if item[key] == value:
-            return item
 
 def calculateComplaints():
     print("calcualting complaints...")
