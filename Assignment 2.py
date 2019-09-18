@@ -132,20 +132,20 @@ def xmlWholeColumn():
     print("Which column would you like to display?")
 
     print("I.E.", " ", end='')
-    for i in range(len(tree[0])):
+    for i in range(len(root[0])):
         print(root[1][i].tag,", ", end='')
         rootlist.append(root[1][i].tag)
     print()
 
     option = str(input(">>> "))
 
-    for i in range(len(tree[0])):
+    for i in range(len(root[0])):
         if (option == root[1][i].tag):
             categoryIndex = i
 
             print("%30s" % (root[1][i].tag))
             print()
-            for j in range(len(tree)):
+            for j in range(len(root)):
                 print("%30s" % (root[j][categoryIndex].text))
     main()
 
