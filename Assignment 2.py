@@ -1,20 +1,28 @@
 import xml.etree.ElementTree as ET
+import json
 import sys
 import tabulate
 
 with open('googleplayapps.xml') as f:
     xml = f.read()
 
+with open('googleplayapps.json') as file1:
+    json = json.load(file1)
+
 def main():
     #program controller
-    fileType = chooseFileType()
+    run = True
+    while(run):
+        fileType = chooseFileType()
 
-    if (fileType == "consumer financial services"):
-        print("consumer financial services")
+        if (fileType == "consumer financial services"):
+            print("consumer financial services")
 
-    displayType = chooseDisplayType()
+        displayType = chooseDisplayType()
 
-    fileMethod = combineFileAndDisplayType(fileType, displayType)
+        fileMethod = combineFileAndDisplayType(fileType, displayType)
+
+        run = chooseToContinue()
 
 def chooseFileType():
     #selects a file type or uses consumer financial services
@@ -98,13 +106,27 @@ def combineFileAndDisplayType(file, display):
     elif (file == "json"):
         if (display == "single record"):
             #jsonSingleRecord()
-            return "JSON and SINGLE RECORD"
+            jsonSingleRow()
         elif (display == "whole column"):
             #jsonWholeColumn()
-            return "JSON and WHOLE COLUMN"
+            jsonSingleCol()
         elif (display == "sort"):
             #jsonSort()
-             return "JSON and SORT"
+            jsonSortedBy()
+
+def chooseToContinue():
+    print("""-----------------------------------------------------
+    Would you like to continue or exit?
+    Type '1' to continue
+    Type '2' to exit
+    -----------------------------------------------------""")
+
+    option = int(input(">>>"))
+
+    if (option == 1):
+        return True
+    elif (option == 2):
+        return False
 
 def xmlSingleRecord():
     root = ET.fromstring(xml)
@@ -118,9 +140,8 @@ def xmlSingleRecord():
         if (option == i):
             print("%3s.  " % (i+1), end='')
             for j in range(len(root[0])):
-                print(root[i][j].text,"   ", end='')
+                print(root[i][j].text, "   ", end='')
     print()
-    main()
 
 def xmlWholeColumn():
     rootlist = []
@@ -145,7 +166,6 @@ def xmlWholeColumn():
             print()
             for j in range(len(root)):
                 print("%30s" % (root[j][categoryIndex].text))
-    main()
 
 def xmlSort():
 
@@ -179,7 +199,7 @@ def xmlSort():
         for m in range(len(tree[0])):
             if (hasNumbers(temp[k][m])):
                 try:
-                    newvalue = temp[k][m].replace(',' , '')
+                    newvalue = temp[k][m].replace(',', '')
                     temp[k][m] = float(newvalue)
                 except Exception as e:
                     continue
@@ -196,7 +216,28 @@ def xmlSort():
     rows =  [x.values() for x in sortedlist]
     print(tabulate.tabulate(rows, header, floatfmt=".1f"))
 
-    main()
+def jsonSingleRow():
+    rowNum = int(input("Choose a row number>>> "))
+    print(rowNum, json[rowNum - 1])
+
+def jsonSingleCol():
+    colName = jsonChooseColName()
+    #dispaly the column in a nice way
+    for element in range(len(json)):
+        print(str(element) + " " + json[element][colName])
+
+def jsonSortedBy():
+    colName = jsonChooseColName()
+    sortedList = sorted(json, key=lambda i: i[colName])
+    #display the sortedList in a nice(ish) way
+    for i in range(len(sortedList)):
+        print(str(i) + " " + sortedList[i][colName])
+        print(sortedList[i])
+
+def jsonChooseColName():
+    print("Options available:", "[OPTIONS]") #TODO [OPTIONS] should be the headers read from the json file
+    colName = input("Choose a colomn name>>> ")
+    return colName
 
 #Checks to see if a map key value should be an int instead of str
 def hasNumbers(inputString):
